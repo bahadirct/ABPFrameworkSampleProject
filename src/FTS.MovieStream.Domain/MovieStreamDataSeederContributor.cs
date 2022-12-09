@@ -40,15 +40,9 @@ namespace FTS.MovieStream
                 type: MovieType.Fantastic
                 );
 
-            var CastMembers = new CastMember(
-                id: GuidGenerator.Create(),
-                movieId: id,
-                name: "Bahadır",
-                surname: "Topçu"
-                );
-
             await MovieRepository.InsertAsync(Movie);
-            await MovieCastMemberRepository.InsertAsync(CastMembers);
+            Movie.AddCastMember(GuidGenerator.Create(), id, "Bahadır", "Topçu");
+
         }
     }
 }
