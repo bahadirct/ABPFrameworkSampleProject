@@ -1,0 +1,20 @@
+﻿@page
+@using FTS.MovieStream.Localization
+@using FTS.MovieStream.Web.Pages.Movie
+@using Microsoft.Extensions.Localization
+@model FTS.MovieStream.Web.Pages.Movie.IndexModel
+@inject IStringLocalizer<MovieStreamResource> L
+@section scripts
+{
+    <abp-script src="/Pages/Movie/Index.js" />
+}
+
+    <abp-card>
+        <abp-card-header>
+            <h2>@L["Filmler"]</h2>
+        </abp-card-header>
+        <abp-card-body>
+            <abp-table striped-rows="true" id="MoviesTable"></abp-table>
+        </abp-card-body>
+    </abp-card>
+
