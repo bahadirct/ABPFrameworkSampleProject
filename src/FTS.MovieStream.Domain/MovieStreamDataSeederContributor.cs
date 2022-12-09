@@ -12,7 +12,7 @@ using Volo.Abp.Guids;
 
 namespace FTS.MovieStream
 {
-    internal class MovieStreamDataSeederContributor  /* IDataSeedContributor, ITransientDependency*/
+    internal class MovieStreamDataSeederContributor  : IDataSeedContributor, ITransientDependency
     {
         protected IMovieRepository MovieRepository { get; }
         protected IMovieCastMemberRepository MovieCastMemberRepository { get; }
